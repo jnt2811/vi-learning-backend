@@ -1,4 +1,4 @@
-const db = require("../../database");
+const db = require("../../config/db_conn");
 const { getAccessToken, getRefreshToken } = require("../../helpers");
 const { v4: uuidv4 } = require("uuid");
 
@@ -6,8 +6,7 @@ const signupController = (req, res, refreshTokens) => {
   const id = uuidv4();
   const { name, email, password } = req.body;
 
-  const sqlInsert =
-    "insert into user (id, name, email, password) values (?,?,?,?)";
+  const sqlInsert = "insert into user (id, name, email, password) values (?,?,?,?)";
 
   db.query(sqlInsert, [id, name, email, password], (error, result) => {
     if (error) {

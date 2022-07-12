@@ -1,4 +1,4 @@
-const db = require("../../database");
+const db = require("../../config/db_conn");
 const { getAccessToken, getRefreshToken } = require("../../helpers");
 
 const loginController = (req, res, refreshTokens) => {
