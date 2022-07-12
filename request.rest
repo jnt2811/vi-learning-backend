@@ -1,0 +1,44 @@
+GET  http://localhost:4000/auth
+###
+
+GET  http://localhost:4000/user
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjQiLCJpYXQiOjE2MzQ5MjY0NDIsImV4cCI6MTYzNTAxMjg0Mn0.i6-DE5s3R9U54ZEFEt2NChry8PHSdW642rLHfhGK0Jc
+###
+
+GET  http://localhost:4000/user
+Authorization:  eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpYXQiOjE2MzQzMDI1Njd9.GgBx3AZVPERySOGf0C62mia2h_WT2nNsAN9agIoZtUo
+###
+
+POST   http://localhost:4000/auth/login
+Content-Type: application/json
+
+{
+    "email": "thanh123",
+    "password": "123"
+}
+
+###
+POST http://localhost:4000/auth/token
+Content-Type: application/json
+
+{
+    "token":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjQiLCJpYXQiOjE2MzQ5MjU2Nzl9.2nK80b_I0TkVBqV_dFgVW0mwXrkuDXjzoudElv3UAKQ"
+}
+
+###
+DELETE  http://localhost:4000/logout
+Content-Type: application/json
+
+{
+    "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoibmd1eWVuIiwiaWF0IjoxNjM0MzkzNzk1fQ.rzlzFuYtfrTTYV4ayJOyHnaSzbH2SI1LPRlaplRg7ks"
+}
+
+###
+POST   http://localhost:4000/auth/signup
+Content-Type: application/json
+
+{
+    "name": "bad guy",
+    "email": "x1",
+    "password": "123"
+}
