@@ -1,10 +1,10 @@
 const mysql = require("mysql2");
 
 let database_info = {
-  host: "eu-cdbr-west-03.cleardb.net",
-  user: "b81c0258d427de",
-  password: "c3158b03",
-  database: "heroku_69d1673d5f21964",
+  host: process.env.MYSQL_HOST,
+  user: process.env.MYSQL_USER,
+  password: process.env.MYSQL_PASSWORD,
+  database: process.env.DATABASE_NAME,
   multipleStatements: true,
   supportBigNumbers: true,
   waitForConnections: true,

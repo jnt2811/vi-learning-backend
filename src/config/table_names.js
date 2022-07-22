@@ -1,9 +1,11 @@
-const table = {
-  USERS: "users",
-  COURSES: "courses",
-  LESSONS: "lessons",
-  TESTS: "tests",
-  QUESTIONS: "questions",
+const TABLE_NAME = {
+  ACCOUNT: "ACCOUNT",
+  USER: "USER",
+  COURSE: "COURSE",
+  LESSON: "LESSON",
+  REF_COURSE_USER: "REF_COURSE_USER",
+  TEST: "TEST",
+
 };
 
-module.exports = { table };
+module.exports = TABLE_NAME;
