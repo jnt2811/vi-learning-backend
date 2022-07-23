@@ -5,7 +5,9 @@ const TABLE_NAME = {
   LESSON: "LESSON",
   REF_COURSE_USER: "REF_COURSE_USER",
   TEST: "TEST",
-
+  QUESTION: "QUESTION",
+  REF_TEST_USER: "REF_TEST_USER",
+  BOOK: "BOOK",
 };
 
 module.exports = TABLE_NAME;
