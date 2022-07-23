@@ -27,6 +27,9 @@ async function getAllUser(req, res, next){
         firstName: "",
         lastName: "",
         role: "",
+        DoB: "",
+        gender: "",
+        email: "",
         phoneNumber: "",
         address: "",
         class: ""
@@ -49,6 +52,9 @@ async function getUserInformation(req, res, next){
         firstName: "",
         lastName: "",
         role: "",
+        DoB: "",
+        gender: "",
+        email: "",
         phoneNumber: "",
         address: "",
         class: ""
@@ -80,6 +86,9 @@ async function login(req, res, next){
         firstName: "",
         lastName: "",
         role: "",
+        DoB: "",
+        gender: "",
+        email: "",
         phoneNumber: "",
         address: "",
         class: ""

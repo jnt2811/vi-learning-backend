@@ -25,7 +25,7 @@ CREATE TABLE IF NOT EXISTS ${TABLE_NAME.COURSE}(
     courseName text charset utf8mb4,
     description text charset utf8mb4,
     privacy varchar(10),
-    thumbnail text charset ut8mb4,
+    thumbnail text charset utf8mb4,
     created_date bigint,
     updated_date bigint,
     state boolean default true,
@@ -44,7 +44,15 @@ CREATE TABLE IF NOT EXISTS ${TABLE_NAME.REF_COURSE_USER}(
 
 CREATE TABLE IF NOT EXISTS ${TABLE_NAME.LESSON}(
     ID varchar(20) not null,
-);
+    lessonName text charset utf8mb4,
+    courseID varchar(20),
+    videoLink text charset utf8mb4,
+    description text charset utf8mb4,
+    created_date bigint,
+    updated_date bigint,
+    state boolean default true,
+    CONSTRAINT FK_REF_LESSON_COURSE FOREIGN KEY (courseID) REFERENCES ${TABLE_NAME.COURSE} (ID),
+    );
 
 CREATE TABLE IF NOT EXISTS ${TABLE_NAME.TEST}(
     ID varchar(20) not null,
@@ -63,7 +71,7 @@ CREATE TABLE IF NOT EXISTS ${TABLE_NAME.TEST}(
 CREATE TABLE IF NOT EXISTS ${TABLE_NAME.QUESTION} (
     ID varchar(20) not null,
     testID varchar(20) not null,
-    question text charset utf8mb4,
+    questions text charset utf8mb4,
     answer text charset utf8mb4,
     correctAnswer text charset utf8mb4,
     created_date bigint,

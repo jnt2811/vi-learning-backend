@@ -12,6 +12,6 @@ module.exports = {
 
   ROLE_ADMIN: "ROLE_ADMIN",
 
-  TOKEN_EXPIRES_TIME: "1h",
+  TOKEN_EXPIRES_TIME: "90d",
   REFRESH_TOKEN_EXPIRES_TIME: "7d"
 };

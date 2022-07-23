@@ -15,8 +15,20 @@ app.use(express.urlencoded({ extended: true }));
 require("dotenv").config();
 
 app.use(compression());
-app.use(cors());
+app.use(
+    cors({
+      origin: "*",
+      methods: "GET,HEAD,PUT,PATCH,POST,DELETE"
+    })
+);
 app.use(methodOverride())
+// app.use(function(req, res, next) {
+//   res.setHeader('Access-Control-Allow-Origin', '*');
+//   res.setHeader('Access-Control-Allow-Methods', 'GET, POST, OPTIONS, PUT, PATCH, DELETE');
+//   res.header("Access-Control-Allow-Headers", "x-access-token, Origin, Authorization, authorization, X-Requested-With, Content-Type, Accept, application/json");
+//   res.setHeader('Access-Control-Allow-Credentials', true);
+//   next();
+// });
 
 process.on("SIGINT", () => {
   console.log("SIGINT signal received: closing HTTP server");
